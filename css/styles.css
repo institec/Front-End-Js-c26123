@@ -7,6 +7,7 @@
 html {
     font-size: 62.5%;
 }
+
 img {
     width: 20rem;
 }
@@ -24,7 +25,7 @@ body {
 
 main {
     width: 80%;
-    margin:  auto;
+    margin: auto;
     padding-bottom: 2rem;
 
     flex: 1;
@@ -35,9 +36,7 @@ main {
 }
 
 h1 {
-    font-family:
-        
-        Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 4rem;
     font-weight: 800;
     line-height: 1.15;
@@ -59,11 +58,17 @@ h2 {
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem 0rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Efecto visual al pasar el mouse */
 }
 
 header,
 footer {
-    background:black;
+    background: black;
     color: white;
     width: 100%;
     display: flex;
@@ -83,7 +88,7 @@ footer {
 footer .footer-list {
     list-style: none;
     display: flex;
-    gap: 2rem
+    gap: 2rem;
 }
 
 .footer-list li {
@@ -99,27 +104,29 @@ footer .footer-list {
     font-size: 2rem;
 } 
 
-
 /* -------------------------------------------------------------------------- */
-/*                                   COLORES                                  */
+/* COLORES                                  */
 /* -------------------------------------------------------------------------- */
 
 .bg-primary {
-    background-color:#2a6d88;
+    background-color: #2a6d88;
 }
+
 .bg-secondary {
-    background-color: black; 
+    background-color: #1a1a1a; /* Gris oscuro para contrastar con las letras doradas */
 }
+
 .text-dark {
-    color: #FFD700;
+    color: #FFD700; /* Dorado */
 }
+
 .text-secondary {
     color: #FFD700;
 }
 
-/*------------------------------------------------------------------------*/
-/*                             Home                                       */
-/*------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
+/* HOME                                    */
+/* -------------------------------------------------------------------------- */
 
 .parrafo {
     width: 80%;
@@ -131,15 +138,16 @@ footer .footer-list {
 .contenedor-tarjetas {
     margin: 2rem;
     display: flex;
-    justify-content:center ;
-    flex-wrap: wrap;/*este es el que hace que cuando no tenga mas lugar, se vaya para abajo*/
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
 .card {
-    background-color: black;
+    background-color: #111111; /* Gris muy oscuro para que la tarjeta se separe del fondo */
     color: white;
     width: 40rem;
+    border: 1px solid #222222; /* Borde elegante para dar relieve */
 
     border-radius: 1rem;
     overflow: hidden;
@@ -154,66 +162,73 @@ footer .footer-list {
 .card img {
     width: 100%;
     height: 20rem;
-    object-fit: cover; /*para que la foto se adapte a cubrir todo y no se deformen*/
+    object-fit: cover;
 }
 
-.text-dark{
+.text-dark {
     text-align: center;
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                  CONTACTO                                  */
+/* CONTACTO                                  */
 /* -------------------------------------------------------------------------- */
+
 .titulo-contacto {
     margin: 2rem 0;
 }
 
 .form-contacto {
-  background-color: #2a8d94;
-  color: #29043D;
-  width: 100%;
-  max-width: 50rem;
-  font-size: 2rem;
-  padding: 3rem;
-  border-radius: 1rem;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /*sombras*/
+    background-color: #2a8d94;
+    color: #29043D;
+    width: 100%;
+    max-width: 50rem;
+    font-size: 2rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
 .grupo-input {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
     margin-bottom: 2rem;
-    color:#29043D;
+    color: #29043D;
 }
+
 .grupo-input input,
 .grupo-input textarea {
     border: none;
     background-color: transparent;
     border-bottom: solid 2px #29043D;
     margin-bottom: 3rem;
+    font-size: 1.6rem;
+    color: #29043D;
+    outline: none;
 }
+
 .grupo-input textarea {
     min-height: 10rem;
     resize: vertical;
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                MEDIA QUERIES                               */
+/* MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
 
 @media (max-width: 600px) {
     header,
     footer {
         flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 0;
     }
-    
 }
 
+/* -------------------------------------------------------------------------- */
+/* LINKS                                    */
+/* -------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/*                                links                              */
-/* -------------------------------------------------------------------------- */
 .social-links {
     list-style: none;
     padding: 0;
